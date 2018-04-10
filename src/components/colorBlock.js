@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const ColorBlock = ({ color, width, height }) => {
   return (
-    <div
+    <li
       style={{
         backgroundColor: color,
         borderRadius: '50%',
@@ -23,6 +23,6 @@ ColorBlock.propTypes = {
 };
 
 ColorBlock.defaultProps = {
-  width: '100px',
-  height: '100px'
+  width: '120px',
+  height: '120px'
 };
