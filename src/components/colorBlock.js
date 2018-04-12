@@ -1,7 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { ColorChosen } from '../actions';
 
-const ColorBlock = ({ color, width, height }) => {
+const ColorBlock = ({ color, width, height, dispatch }) => {
+  const onClick = e => {
+    console.log(e.target.style.backgroundColor);
+    dispatch(ColorChosen(e.target.style.backgroundColor));
+  };
+
   return (
     <li
       style={{
@@ -10,11 +17,10 @@ const ColorBlock = ({ color, width, height }) => {
         width: width,
         height: height
       }}
+      onClick={onClick}
     />
   );
 };
-
-export default ColorBlock;
 
 ColorBlock.propTypes = {
   color: PropTypes.string.isRequired,
@@ -26,3 +32,5 @@ ColorBlock.defaultProps = {
   width: '100px',
   height: '100px'
 };
+
+export default connect()(ColorBlock);

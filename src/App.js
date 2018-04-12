@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './App.css';
 import ColorBlock from './components/colorBlock';
-import ColorBlockWrapper from './components/colorBlockWrapper';
+import ColorBlockWrapper2 from './components/colorBlockWrapper';
 
 class App extends Component {
   render() {
@@ -13,11 +13,10 @@ class App extends Component {
     return (
       <div className="App">
         0
-        <div className="mainColor" style={{ backgroundColor: mainColor }} >
+        <div className="mainColor" style={{ backgroundColor: mainColor }}>
           <span className="mainColorText">What color is this?</span>
         </div>
-        <ColorBlockWrapper colorArray={colorArray}/>
-
+        <ColorBlockWrapper2 colorArray={colorArray} />
       </div>
     );
   }
