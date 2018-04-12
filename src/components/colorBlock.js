@@ -5,7 +5,6 @@ import { colorChosen } from '../actions';
 
 const ColorBlock = ({ color, width, height, dispatch }) => {
   const onClick = e => {
-    console.log(e.target.style.backgroundColor);
     dispatch(colorChosen(e.target.style.backgroundColor));
   };
 

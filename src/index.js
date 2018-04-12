@@ -15,7 +15,7 @@ let store = createStore(
 );
 
 (function renderMainColor() {
-  store.dispatch(mainColor('#ff0000'));
+  store.dispatch(mainColor('rgb(255, 0, 0)'));
 })();
 
 ReactDOM.render(

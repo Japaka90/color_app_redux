@@ -1,10 +1,14 @@
 import { combineReducers } from 'redux';
 import { initialState } from './initialState';
 
-function CountState(state = {}, action) {
+function countState(state = { round: 0 }, action) {
   switch (action.type) {
+    case 'START_GAME':
+      return { ...state, round: 1 };
     case 'NEXT_ROUND':
       return { ...state, round: (state.round += 1) };
+    case 'CHANGE_SCORE':
+      return { ...state, score: (state.score += action.value) };
     default:
       return state;
   }
@@ -22,7 +26,7 @@ function colorsState(state = {}, action) {
 }
 
 const colorAppReducer = combineReducers({
-  CountState,
+  countState,
   colorsState
 });
 
