@@ -1,9 +1,14 @@
-export const ColorChosen = color => ({
+export const mainColor = color => ({
+  type: 'MAIN_COLOR',
+  color
+});
+
+export const colorChosen = color => ({
   type: 'COLOR_CHOSEN',
   color
 });
 
-export const NextRound = currentRoundId => ({
+export const nextRound = currentRoundId => ({
   type: 'NEXT_ROUND',
   id: currentRoundId + 1
 });

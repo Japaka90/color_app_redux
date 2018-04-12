@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { ColorChosen } from '../actions';
+import { colorChosen } from '../actions';
 
 const ColorBlock = ({ color, width, height, dispatch }) => {
   const onClick = e => {
     console.log(e.target.style.backgroundColor);
-    dispatch(ColorChosen(e.target.style.backgroundColor));
+    dispatch(colorChosen(e.target.style.backgroundColor));
   };
 
   return (
