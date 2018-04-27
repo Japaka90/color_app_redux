@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import { initialState } from './initialState';
 
-function countState(state = { round: 0 }, action) {
+function countState(state = { round: 1 }, action) {
   switch (action.type) {
     case 'START_GAME':
       return { ...state, round: 1 };
