@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './App.css';
 import ColorBlock from './components/colorBlock';
+import Header from './containers/header';
 import MainGamePart from './containers/mainGamePart';
-import { mainColor } from './actions';
-import { nextRound } from './actions';
+import InfoTableWrapper from './containers/infoTableWrapper';
 
 class App extends Component {
   render() {
@@ -17,6 +17,8 @@ class App extends Component {
     const colorArray = ['#ff0000', '#1E90FF', '#EE82EE', '#F0E68C'];
     return (
       <div className="App">
+        <Header />
+        <InfoTableWrapper />
         <MainGamePart />
       </div>
     );

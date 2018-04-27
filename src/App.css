@@ -11,7 +11,7 @@
   top: 50%;
 }
 
-ul {
+.colorArray {
   margin: auto;
   display: flex;
   flex-flow: row wrap;
@@ -22,6 +22,48 @@ ul {
   padding: 0;
 }
 
-li {
+.colorArray li {
   list-style-type: none;
+}
+
+.table,
+.header {
+  max-width: 970px;
+  margin: auto;
+}
+
+.table {
+  height: 90px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.table li {
+  box-sizing: border-box;
+  background: #f2f2f2;
+  border-left: solid #fff 1px;
+  border-right: solid #fff 1px;
+  width: 25%;
+  display: block;
+  float: left;
+  text-align: center;
+  text-shadow: 0 1px 0 #fff;
+  padding: 20px 0;
+}
+
+.table li span {
+  display: block;
+  height: 20px;
+  line-height: 20px;
+  font-size: 1.2rem;
+}
+
+.table li strong {
+  height: 30px;
+  font-size: 2.6rem;
+}
+
+.header {
+  padding-left: 40px;
+  height: 50px;
 }

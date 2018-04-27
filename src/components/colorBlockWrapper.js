@@ -6,7 +6,7 @@ const ColorBlockWrapper = ({ colorArray, blockOnClick }) => {
   const blockWrapperWidth = colorArray.length / 2 * 110 + 'px';
 
   return (
-    <ul style={{ width: blockWrapperWidth }}>
+    <ul className="colorArray" style={{ width: blockWrapperWidth }}>
       {colorArray.map(color => {
         return (
           <ColorBlock key={color} color={color} blockOnClick={blockOnClick} />

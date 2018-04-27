@@ -21,3 +21,13 @@ export const scoreChosen = value => ({
   type: 'CHANGE_SCORE',
   value
 });
+
+export const showMessage = value => ({
+  type: 'SHOW_MESSAGE',
+  value
+});
+
+export const hideMessage = value => ({
+  type: 'HIDE_MESSAGE',
+  value
+});
